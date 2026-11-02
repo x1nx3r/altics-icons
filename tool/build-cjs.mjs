@@ -5,17 +5,23 @@ import { join } from "node:path";
 const outDir = "dist/cjs";
 rmSync(outDir, { recursive: true, force: true });
 
-const iconFiles = readdirSync("src/icons").filter((file) => file.endsWith(".tsx"));
-const entryPoints = [
-  "src/index.ts",
-  "src/icons/index.ts",
-  ...iconFiles.map((file) => join("src/icons", file)),
-];
+function collectSources(dir) {
+  const files = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...collectSources(path));
+    } else if (entry.name.endsWith(".ts") || entry.name.endsWith(".tsx")) {
+      files.push(path);
+    }
+  }
+  return files;
+}
 
 // Transpile each module separately. Do not bundle: one output file per icon
 // keeps imports small and keeps the module graph identical to the ESM build.
 await build({
-  entryPoints,
+  entryPoints: collectSources("src"),
   outdir: outDir,
   outbase: "src",
   bundle: false,
