@@ -91,6 +91,7 @@ npm install
 npm run fetch:tech  # Rebuild icons/tech from simple-icons and devicon
 npm run generate    # icons/**/*.svg -> src/icons and src/tech/*
 npm run build       # dist/esm, dist/cjs, dist/types
+npm run preview     # Build a static gallery at preview/index.html
 npm test            # Build and run the smoke test for all icons
 npm pack --dry-run
 ```

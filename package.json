@@ -52,6 +52,7 @@
     "build": "npm run clean && npm run generate && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc -p tsconfig.build.json",
     "build:cjs": "node tool/build-cjs.mjs",
+    "preview": "npm run build && node tool/build-preview.mjs",
     "typecheck": "tsc --noEmit",
     "test": "npm run build && node tool/smoke-test.mjs",
     "prepublishOnly": "npm run build"
