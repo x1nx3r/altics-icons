@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "description": "Tree-shakeable React icons for UI, languages, and tech.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x1nx3r/altics-icons.git"
+  },
+  "homepage": "https://github.com/x1nx3r/altics-icons#readme",
+  "bugs": {
+    "url": "https://github.com/x1nx3r/altics-icons/issues"
+  },
   "type": "module",
   "sideEffects": false,
   "files": [
