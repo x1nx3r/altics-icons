@@ -42,10 +42,10 @@ function makeItem(name, set, Icon) {
   const category = set === "ui" ? null : categoryByName.get(name) ?? null;
   const importPath =
     set === "ui"
-      ? `@altics/icons/icons/${name}`
+      ? `@x1nx3r/altics-react-icons/icons/${name}`
       : set === "mono"
-        ? `@altics/icons/tech/${name}`
-        : `@altics/icons/tech/color/${name}`;
+        ? `@x1nx3r/altics-react-icons/tech/${name}`
+        : `@x1nx3r/altics-react-icons/tech/color/${name}`;
 
   return { name, set, category, importPath, html };
 }

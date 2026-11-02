@@ -88,22 +88,22 @@ checkIcon("JavaScriptIcon (CJS)", cjsMono.JavaScriptIcon, 20);
 checkIcon("ReactIcon (CJS color)", cjsColor.ReactIcon, 20);
 
 // Package exports map: barrels, subpaths, and self-reference must resolve.
-const selfUi = await import("@altics/icons");
-const selfMono = await import("@altics/icons/tech");
-const selfColor = await import("@altics/icons/tech/color");
+const selfUi = await import("@x1nx3r/altics-react-icons");
+const selfMono = await import("@x1nx3r/altics-react-icons/tech");
+const selfColor = await import("@x1nx3r/altics-react-icons/tech/color");
 assert.equal(Object.keys(selfUi).length, uiCount, "Self-referenced UI barrel is incomplete");
 assert.equal(Object.keys(selfMono).length, monoCount, "Self-referenced tech barrel is incomplete");
 assert.equal(Object.keys(selfColor).length, colorCount, "Self-referenced color barrel is incomplete");
 
-const monoSubpath = await import("@altics/icons/tech/JavaScriptIcon");
-const colorSubpath = await import("@altics/icons/tech/color/ReactIcon");
+const monoSubpath = await import("@x1nx3r/altics-react-icons/tech/JavaScriptIcon");
+const colorSubpath = await import("@x1nx3r/altics-react-icons/tech/color/ReactIcon");
 checkIcon("JavaScriptIcon (subpath)", monoSubpath.JavaScriptIcon, 16);
 checkIcon("ReactIcon (subpath color)", colorSubpath.ReactIcon, 16);
 
-const selfCjsMono = require("@altics/icons/tech");
-const selfCjsColor = require("@altics/icons/tech/color");
-const cjsMonoSubpath = require("@altics/icons/tech/JavaScriptIcon");
-const cjsColorSubpath = require("@altics/icons/tech/color/ReactIcon");
+const selfCjsMono = require("@x1nx3r/altics-react-icons/tech");
+const selfCjsColor = require("@x1nx3r/altics-react-icons/tech/color");
+const cjsMonoSubpath = require("@x1nx3r/altics-react-icons/tech/JavaScriptIcon");
+const cjsColorSubpath = require("@x1nx3r/altics-react-icons/tech/color/ReactIcon");
 assert.equal(Object.keys(selfCjsMono).length, monoCount, "Self-referenced CJS tech barrel is incomplete");
 assert.equal(Object.keys(selfCjsColor).length, colorCount, "Self-referenced CJS color barrel is incomplete");
 checkIcon("JavaScriptIcon (CJS subpath)", cjsMonoSubpath.JavaScriptIcon, 16);

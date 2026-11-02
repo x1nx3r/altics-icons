@@ -5,7 +5,7 @@ React icon components for Altics UI. The package contains 1,311 UI icons and 298
 ## Install
 
 ```bash
-npm install @altics/icons
+npm install @x1nx3r/altics-react-icons
 ```
 
 React 18 or later is a peer dependency.
@@ -13,7 +13,7 @@ React 18 or later is a peer dependency.
 ## UI icons
 
 ```tsx
-import { ActivityIcon, SearchIcon } from "@altics/icons";
+import { ActivityIcon, SearchIcon } from "@x1nx3r/altics-react-icons";
 
 export function Toolbar() {
   return (
@@ -32,11 +32,11 @@ The tech set has 152 monochrome icons and 146 full-color icons. It covers langua
 Monochrome icons use `currentColor`. Color icons keep the official brand colors.
 
 ```tsx
-import { DockerIcon, JavaScriptIcon } from "@altics/icons/tech";
+import { DockerIcon, JavaScriptIcon } from "@x1nx3r/altics-react-icons/tech";
 import {
   DockerIcon as DockerColorIcon,
   JavaScriptIcon as JavaScriptColorIcon,
-} from "@altics/icons/tech/color";
+} from "@x1nx3r/altics-react-icons/tech/color";
 
 export function Stack() {
   return (
@@ -52,8 +52,8 @@ export function Stack() {
 Use a per-icon import to load one module:
 
 ```tsx
-import { JavaScriptIcon } from "@altics/icons/tech/JavaScriptIcon";
-import { ReactIcon } from "@altics/icons/tech/color/ReactIcon";
+import { JavaScriptIcon } from "@x1nx3r/altics-react-icons/tech/JavaScriptIcon";
+import { ReactIcon } from "@x1nx3r/altics-react-icons/tech/color/ReactIcon";
 ```
 
 ## Props
@@ -71,17 +71,17 @@ UI and monochrome tech icons use `currentColor`. Set the color with the CSS `col
 Named imports from each entry are tree-shakeable. The package sets `sideEffects` to `false`. To limit the module graph to one icon, use a subpath import:
 
 ```tsx
-import { ActivityIcon } from "@altics/icons/icons/ActivityIcon";
-import { JavaScriptIcon } from "@altics/icons/tech/JavaScriptIcon";
-import { ReactIcon } from "@altics/icons/tech/color/ReactIcon";
+import { ActivityIcon } from "@x1nx3r/altics-react-icons/icons/ActivityIcon";
+import { JavaScriptIcon } from "@x1nx3r/altics-react-icons/tech/JavaScriptIcon";
+import { ReactIcon } from "@x1nx3r/altics-react-icons/tech/color/ReactIcon";
 ```
 
 ## CommonJS
 
 ```js
-const { ActivityIcon } = require("@altics/icons");
-const { JavaScriptIcon } = require("@altics/icons/tech");
-const { ReactIcon } = require("@altics/icons/tech/color");
+const { ActivityIcon } = require("@x1nx3r/altics-react-icons");
+const { JavaScriptIcon } = require("@x1nx3r/altics-react-icons/tech");
+const { ReactIcon } = require("@x1nx3r/altics-react-icons/tech/color");
 ```
 
 ## Development
